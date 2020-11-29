@@ -72,13 +72,15 @@ public class App {
 
     }
 
-    public static boolean search(ArrayList<Integer> array, int e) {
+    // searches for any of {e,e2,e+e2} exists in given
+    public static boolean search(ArrayList<Integer> array, int e , int e2) {
         System.out.println("inside search");
 
         if (array == null) return false;
 
         for (int elt : array) {
-            if (elt == e) return true;
+            if ( (elt == e) ||  (elt == e2) || (elt == (e+e2) )) 
+                return true;
         }
         return false;
     }
